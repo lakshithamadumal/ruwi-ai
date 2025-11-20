@@ -289,3 +289,10 @@ body {
   text-align: center;
   transform-origin: 50% 60px;
 }
+
+@media (max-width: 900px) {
+  .circle-container {
+    display: none !important;
+  }
+}
+
