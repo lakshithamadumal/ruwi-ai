@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'Noto Serif Sinhala', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -96,7 +96,7 @@ body {
   background-image: url("../img/avatar.png");
   background-size: cover;
   margin-bottom: 3rem;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .welcome-text {
@@ -254,5 +254,97 @@ body {
 
   .subtitle {
     font-size: 1rem;
+  }
+}
+
+/* Blur Circle */
+
+.pink-purple-blob {
+  position: absolute;
+  top: -20%;
+  left: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 80, 200, 0.55),
+    rgba(255, 80, 200, 0.55),
+    rgba(120, 40, 255, 0.15),
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pink-purple-blob1 {
+  position: absolute;
+    top: 40%;
+  left: 80%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 80, 200, 0.55),
+      rgba(160, 60, 255, 0.45),
+    rgba(120, 40, 255, 0.15),
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Animate */
+
+.pink-purple-blob,
+.pink-purple-blob1 {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.85;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pink-purple-blob {
+  top: 10%;
+  left: -8%;
+  background: radial-gradient(circle,
+    rgba(255, 120, 230, 0.55),
+    rgba(180, 120, 255, 0.45),
+    transparent 70%
+  );
+  animation: floatBlob1 10s ease-in-out infinite alternate;
+}
+
+.pink-purple-blob1 {
+  bottom: 15%;
+  right: -10%;
+  background: radial-gradient(circle,
+    rgba(150, 180, 255, 0.45),
+    rgba(255, 120, 200, 0.40),
+    transparent 70%
+  );
+  animation: floatBlob2 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatBlob1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+}
+
+@keyframes floatBlob2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-40px, 25px) scale(1.12);
   }
 }
