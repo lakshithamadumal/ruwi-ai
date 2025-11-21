@@ -28,12 +28,16 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/chat.css">
+        <link rel="stylesheet" href="assets/css/cursor.css">
     </head>
     <body>
+        <!-- cursor-->
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
         <div class="container">
             <!-- Header -->
             <header class="header">
-                <div class="logo">
+                <div class="logo" onclick="window.open('https://www.ruwi.studio/', '_self')">
                     <img
                         src="assets/img/favicon-dark.png"
                         width="24"
@@ -101,5 +105,6 @@
         </div>
         <script crossorigin="anonymous" src="//unpkg.com/same-runtime/dist/index.global.js"></script>
         <script type="module" src="assets/js/chat.ts"></script>
+        <script src="assets/js/cursor.js"></script>
     </body>
 </html>
